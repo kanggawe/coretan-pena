@@ -1,3 +1,6 @@
+# load balancw
+# generate by mikrotik 
+# esanet.id
 #interface
 /interface ethernet
 set [ find default-name=ether1 ] name=ether1WAN1-50M speed=100Mbps
