@@ -1,3 +1,4 @@
+#interface
 /interface ethernet
 set [ find default-name=ether1 ] name=ether1WAN1-50M speed=100Mbps
 set [ find default-name=ether2 ] name=ether2WAN2-50M speed=100Mbps
