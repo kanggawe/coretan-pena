@@ -46,6 +46,7 @@ add action=mark-routing chain=prerouting connection-mark=ISP2-CONN \
 /ip firewall nat
 add action=masquerade chain=srcnat out-interface=ether1WAN1-50M
 add action=masquerade chain=srcnat out-interface=ether2WAN2-50M
+
 /ip route
 add check-gateway=ping comment=ISP1 distance=1 gateway=8.8.8.8 routing-mark=\
     ISP1 target-scope=30
