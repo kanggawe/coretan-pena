@@ -3,6 +3,8 @@
 #
 # model = RB750Gr3
 # serial number = CC210BFD5366
+/system identity
+set name=RO-DIST-CANGKINGAN
 /interface bridge
 add disabled=yes name=bridge1
 /interface vlan
@@ -3610,5 +3612,3 @@ add area=backbone network=192.168.121.0/24
 add area=backbone network=10.13.14.0/24
 /system clock
 set time-zone-name=Asia/Jakarta
-/system identity
-set name=RO-DIST-CANGKINGAN
