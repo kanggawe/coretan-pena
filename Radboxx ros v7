@@ -1,7 +1,8 @@
-/interface/sstp-client> add connect-to=103.116.83.85 port=4433 nam
-e=sstp-RadbooX password="kastem" user=jxn disabled=no  
+/interface/sstp-client
+add connect-to=103.116.83.85 port=4433 name=sstp-RadbooX password="kastem" user=jxn disabled=no  
 /ip route
 add disabled=no distance=1 dst-address=103.116.83.83 gateway=sstp-RadbooX
 
 #tambahan untuk routing buat olt 
-routing/table/add name=radboox-olt fib
+routing/table/
+add name=radboox-olt fib
