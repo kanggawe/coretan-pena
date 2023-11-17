@@ -29,7 +29,7 @@ set accept=yes
 ## SNMP
 /snmp community
 set [ find default=yes ] disabled=yes
-add addresses=103.116.83.82/32 name=RadbooX write-access=yes read-access=yes
+add addresses=103.116.83.82/32 name=RadbooX write-access=yes read-access=yes/
 /snmp
 set enabled=yes
 
