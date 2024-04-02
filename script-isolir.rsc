@@ -4,7 +4,7 @@ set enabled=yes
 /ip proxy access
 add action=redirect action-data=isolir.radboox.com src-address=172.30.0.0/16
 
-ip firewall nat
+/ip firewall nat
 add action=redirect chain=dstnat comment="Generate RadbooX - Isolir WebProxy" disabled=no \
 dst-address="!103.116.83.80/29" dst-port="80,443" protocol=tcp \
 src-address="172.30.0.0/16" to-ports="8080"
