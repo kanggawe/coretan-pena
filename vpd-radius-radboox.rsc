@@ -34,8 +34,22 @@ add addresses=103.116.83.82/32 name=RadbooX write-access=yes read-access=yes/
 set enabled=yes
 
 ## Membuat VPN Buat OLT ZTE
+/ip firewall nat
+add action=dst-nat chain=dstnat comment="generate By RadbooX"\
+dst-address=172.29.2.161 dst-port=161,162 protocol=udp\
+src-address=103.116.83.82 to-addresses=10.100.100.2
 
+/ip firewall mangle
+add action=mark-connection chain=prerouting comment="generate By RadbooX"\
+dst-address=103.116.83.82 in-interface="400-MGMT-OLT C300" new-connection-mark=radboox passthrough=yes\
+protocol=udp src-address=10.100.100.2 src-port=161,162
+add action=mark-routing chain=prerouting comment="generate By RadbooX"\
+connection-mark=radboox dst-address=103.116.83.82 in-interface="400-MGMT-OLT C300"\
+new-routing-mark=radboox-olt passthrough=no protocol=udp\
+src-address=10.100.100.2 src-port=161,162
 
+/ip route
+add comment="generate By RadbooX" distance=1 gateway=sstp-RadbooX-olt routing-mark=radboox-olt
 
 # tambahan untuk routing buat olt ros v7
 /routing table 
