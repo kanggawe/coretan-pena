@@ -20,3 +20,8 @@
 :delay delay-time=5s
 
 /file remove Routerku.backup
+
+
+#tls=starttls pada email setting
+dan pada send email 
+
