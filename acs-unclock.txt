@@ -1,0 +1,3 @@
+tr069-mgmt 1 state unlock
+tr069-mgmt 1 acs http://acs.mitracom.id:9909/v1/acs validate basic username acsmitracom password mitracom@2025
+!
